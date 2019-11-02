@@ -1,3 +1,15 @@
+## Clone the repository, install node packages and verify routes locally
+
+//on local
+
+git clone https://skm14747@bitbucket.org/skm14747/cubereum_school_api.git
+
+cd cubereum_school_api
+
+npm install
+
+npm start
+
 ## File organisation
 
 
@@ -25,11 +37,11 @@
 
 
 ## API
-#### `GET /`
+#### `GET http://localhost:5000/`
 This endpoint will fetch all the data
-#### `GET /?search=keyword`
+#### `GET http://localhost:5000/?search=keyword`
 This endpoint will search and fetch all the data based on the given keyword in the query string.
-#### `GET /?search=keyword&sortby=schoolname_asc`
+#### `GET http://localhost:5000/?search=keyword&sortby=schoolname_asc`
 This endpoint will search and fetch all the data based on the given keyword in the query string and will order all the data based on below keywords
 
 | Sort fields      | Description    |
