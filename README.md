@@ -2,17 +2,27 @@
 
 
 └── node_modules
+
 └── data  
------└──schoolData.json  
+--------└──schoolData.json  
+
 └── models  
------└──school.js
+--------└──school.js
+
 └── routes
------└──school.js
+
+--------└──school.js
+
 └── helpers
------└──csvToJsonConverter.js 
+
+--------└──csvToJsonConverter.js 
+
 └── package-lock.json
+
 └── package.json
+
 └── server.js
+
 
 ## API
 #### `GET /`
@@ -20,19 +30,19 @@ This endpoint will fetch all the data
 #### `GET /?search=keyword`
 This endpoint will search and fetch all the data based on the given keyword in the query string.
 #### `GET /?search=keyword&sortby=schoolname_asc`
-This endpoint will search and fetch all the data based on the given keyword in the query string and will order all the data based on below keywods
-| sortfield |description  |
-|--|--|
-| schoolname_asc | This will sort data in ascending order by school name |
-| schoolname_desc | This will sort data in descending order by school name  |
-| pincode_asc | This will sort data in ascending order by pincode |
-| pincode_desc | This will sort data in descending order by pincode|
-| medofinst_asc | This will sort data in ascending order by medium_of_inst |
+This endpoint will search and fetch all the data based on the given keyword in the query string and will order all the data based on below keywords
+
+| Sort fields      | Description    |
+| --------|---------|
+| schoolname_asc  | This will sort data in ascending order by school name   |
+| schoolname_desc | This will sort data in descending order by school name |
+| pincode_asc  | This will sort data in ascending order by school name   |
+| pincode_desc | This will sort data in descending order by school name |
+| medofinst_asc  | This will sort data in ascending order by medium_of_inst   |
 | medofinst_desc | This will sort data in descending order by medium_of_inst |
 
-##  Sample Response
+###  Sample Response of above request
 
-#### req : GET  /?search=HARINAGAR&sortby=schoolname_asc
 
     {
     "filters": {
