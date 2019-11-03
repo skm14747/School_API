@@ -4,7 +4,7 @@ const { searchByKey, orderByKey } = require("../models/school");
 const schoolRoute = new express.Router();
 
 schoolRoute.get("/", async (req, res) => {
-  let searchKey = req.query.search;
+  let searchKey = !req.query.search ? "" : req.query.search;
   let orderKey = req.query.sortby;
   const filteredData = searchByKey(searchKey);
   try {
